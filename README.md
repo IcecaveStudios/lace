@@ -73,4 +73,4 @@ Array
 <!-- references -->
 [Build Status]: http://img.shields.io/travis/IcecaveStudios/lace/develop.svg
 [Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/lace/develop.svg
-[SemVer]: http://img.shields.io/:semver-0.0.0-red.svg
+[SemVer]: http://img.shields.io/:semver-0.1.0-yellow.svg
