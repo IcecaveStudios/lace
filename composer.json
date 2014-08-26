@@ -1,7 +1,16 @@
 {
     "name": "icecave/lace",
-    "description": "This package needs a description!",
-    "keywords": [],
+    "description": "A DSN parser for Doctrine databases and cache drivers.",
+    "keywords": [
+        "dsn",
+        "doctrine",
+        "parser",
+        "postgres",
+        "mysql",
+        "sqlite",
+        "redis",
+        "heroku"
+    ],
     "homepage": "https://github.com/IcecaveStudios/lace",
     "license": "MIT",
     "authors": [
