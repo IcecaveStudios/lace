@@ -53,7 +53,6 @@ class CacheDsnParserTest extends PHPUnit_Framework_TestCase
                     'host' => 'hostname',
                     'port' => 1234,
                     'password' => 'password',
-
                 ],
             ],
         ];
