@@ -1,0 +1,26 @@
+
+
+Code Coverage Report:     
+  2014-08-26 01:33:17     
+                          
+ Summary:                 
+  Classes: 100.00% (8/8)  
+  Methods: 100.00% (19/19)
+  Lines:   100.00% (79/79)
+
+\Icecave\Lace::CacheDsnParser
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  2/  2)
+\Icecave\Lace::DatabaseDsnParser
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  4/  4)
+\Icecave\Lace::ParserTrait
+  Methods: 100.00% ( 3/ 3)   Lines: 100.00% ( 15/ 15)
+\Icecave\Lace\Handler::ConnectionOptionsHandlerTrait
+  Methods: 100.00% ( 3/ 3)   Lines: 100.00% ( 24/ 24)
+\Icecave\Lace\Handler::MySqlHandler
+  Methods: 100.00% ( 3/ 3)   Lines: 100.00% (  7/  7)
+\Icecave\Lace\Handler::PostgresHandler
+  Methods: 100.00% ( 3/ 3)   Lines: 100.00% (  7/  7)
+\Icecave\Lace\Handler::RedisHandler
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 12/ 12)
+\Icecave\Lace\Handler::SqliteHandler
+  Methods: 100.00% ( 3/ 3)   Lines: 100.00% (  8/  8)

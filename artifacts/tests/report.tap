@@ -1,0 +1,16 @@
+TAP version 13
+ok 1 - Icecave\Lace\CacheDsnParserTest::testParse with data set #0 ('redis://hostname', array('hostname', 6379))
+ok 2 - Icecave\Lace\CacheDsnParserTest::testParse with data set #1 ('redis://username:password@hostname:1234', array('hostname', 1234, 'password'))
+ok 3 - Icecave\Lace\CacheDsnParserTest::testParseFailure
+ok 4 - Icecave\Lace\DatabaseDsnParserTest::testParse with data set #0 ('postgres://hostname', array('pdo_pgsql', 'hostname', 5432))
+ok 5 - Icecave\Lace\DatabaseDsnParserTest::testParse with data set #1 ('postgres://username:password@hostname:1234/database', array('pdo_pgsql', 'username', 'password', 'hostname', 1234, 'database'))
+ok 6 - Icecave\Lace\DatabaseDsnParserTest::testParse with data set #2 ('postgresql://username:password@hostname:1234/database', array('pdo_pgsql', 'username', 'password', 'hostname', 1234, 'database'))
+ok 7 - Icecave\Lace\DatabaseDsnParserTest::testParse with data set #3 ('mysql://hostname', array('pdo_mysql', 'hostname', 3306))
+ok 8 - Icecave\Lace\DatabaseDsnParserTest::testParse with data set #4 ('mysql://username:password@hostname:1234/database', array('pdo_mysql', 'username', 'password', 'hostname', 1234, 'database'))
+ok 9 - Icecave\Lace\DatabaseDsnParserTest::testParse with data set #5 ('sqlite://memory', array('pdo_sqlite', true))
+ok 10 - Icecave\Lace\DatabaseDsnParserTest::testParse with data set #6 ('sqlite://username:password@memory', array('pdo_sqlite', true, 'username', 'password'))
+ok 11 - Icecave\Lace\DatabaseDsnParserTest::testParse with data set #7 ('sqlite://username:password@file/path/to/file.sq3', array('pdo_sqlite', false, 'username', 'password', '/path/to/file.sq3'))
+ok 12 - Icecave\Lace\DatabaseDsnParserTest::testParseFailure
+ok 13 - Icecave\Lace\ParserTraitTest::testParse
+ok 14 - Icecave\Lace\ParserTraitTest::testAddAndRemoveHandlers
+1..14
