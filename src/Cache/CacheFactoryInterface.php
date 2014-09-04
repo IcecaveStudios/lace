@@ -7,7 +7,7 @@ namespace Icecave\Lace\Cache;
 interface CacheFactoryInterface
 {
     /**
-     * Create a cache object.
+     * Create a cache provider.
      *
      * @param string      $dsn       The cache DSN.
      * @param string|null $namespace The cache namespace to use, if supported by the underlying driver.
