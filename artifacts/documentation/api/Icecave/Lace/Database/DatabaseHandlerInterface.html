@@ -3,27 +3,27 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>Icecave\Lace\Handler\Cache\CacheHandlerInterface | icecave/lace API</title>
-                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+        <title>Icecave\Lace\Database\DatabaseHandlerInterface | icecave/lace API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
                             </head>
         <body id="class">
             <div class="header">
         <ul>
-            <li><a href="../../../../classes.html">Classes</a></li>
-                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
-                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
-            <li><a href="../../../../doc-index.html">Index</a></li>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
             
         </ul>
 
         <div id="title">icecave/lace API</div>
 
             <div class="type">Interface</div>
-    <h1><a href="../../../../Icecave/Lace/Handler/Cache.html">Icecave\Lace\Handler\Cache</a>\CacheHandlerInterface</h1>
+    <h1><a href="../../../Icecave/Lace/Database.html">Icecave\Lace\Database</a>\DatabaseHandlerInterface</h1>
     </div>
         <div class="content">
-                <p>interface    <strong>CacheHandlerInterface</strong>        implements
-        <a href="../../../../Icecave/Lace/Handler/HandlerInterface.html"><abbr title="Icecave\Lace\Handler\HandlerInterface">HandlerInterface</abbr></a></p>
+                <p>interface    <strong>DatabaseHandlerInterface</strong>        implements
+        <a href="../../../Icecave/Lace/HandlerInterface.html"><abbr title="Icecave\Lace\HandlerInterface">HandlerInterface</abbr></a></p>
 
     
     
@@ -39,7 +39,7 @@
                     <a href="#method_supports">supports</a>(string $dsn, mixed $data = null)
                     <p>Check if this handler is responisble for parsing the given DSN.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Icecave/Lace/Handler/HandlerInterface.html#method_supports"><abbr title="Icecave\Lace\Handler\HandlerInterface">HandlerInterface</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Lace/HandlerInterface.html#method_supports"><abbr title="Icecave\Lace\HandlerInterface">HandlerInterface</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -49,14 +49,14 @@
                     <a href="#method_parse">parse</a>(string $dsn, mixed $data = null)
                     <p>Parse a DSN.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Icecave/Lace/Handler/HandlerInterface.html#method_parse"><abbr title="Icecave\Lace\Handler\HandlerInterface">HandlerInterface</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Lace/HandlerInterface.html#method_parse"><abbr title="Icecave\Lace\HandlerInterface">HandlerInterface</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     mixed
                 </td>
                 <td class="last">
-                    <a href="#method_accept">accept</a>(<a href="../../../../Icecave/Lace/Handler/Cache/CacheVisitorInterface.html"><abbr title="Icecave\Lace\Handler\Cache\CacheVisitorInterface">CacheVisitorInterface</abbr></a> $visitor)
+                    <a href="#method_accept">accept</a>(<a href="../../../Icecave/Lace/Database/DatabaseVisitorInterface.html"><abbr title="Icecave\Lace\Database\DatabaseVisitorInterface">DatabaseVisitorInterface</abbr></a> $visitor)
                     <p>Visit this node with the given visitor.</p>
                 </td>
                 <td></td>
@@ -67,7 +67,7 @@
         <h2>Details</h2>
 
                         <h3 id="method_supports">
-        <div class="location">in <a href="../../../../Icecave/Lace/Handler/HandlerInterface.html#method_supports"><abbr title="Icecave\Lace\Handler\HandlerInterface">HandlerInterface</abbr></a> at line 16</div>
+        <div class="location">in <a href="../../../Icecave/Lace/HandlerInterface.html#method_supports"><abbr title="Icecave\Lace\HandlerInterface">HandlerInterface</abbr></a> at line 16</div>
         <code>            public            boolean
     <strong>supports</strong>(string $dsn, mixed $data = null)</code>
     </h3>
@@ -107,7 +107,7 @@
     </div>
 
                 <h3 id="method_parse">
-        <div class="location">in <a href="../../../../Icecave/Lace/Handler/HandlerInterface.html#method_parse"><abbr title="Icecave\Lace\Handler\HandlerInterface">HandlerInterface</abbr></a> at line 29</div>
+        <div class="location">in <a href="../../../Icecave/Lace/HandlerInterface.html#method_parse"><abbr title="Icecave\Lace\HandlerInterface">HandlerInterface</abbr></a> at line 29</div>
         <code>            public            mixed
     <strong>parse</strong>(string $dsn, mixed $data = null)</code>
     </h3>
@@ -157,7 +157,7 @@
                 <h3 id="method_accept">
         <div class="location">at line 15</div>
         <code>            public            mixed
-    <strong>accept</strong>(<a href="../../../../Icecave/Lace/Handler/Cache/CacheVisitorInterface.html"><abbr title="Icecave\Lace\Handler\Cache\CacheVisitorInterface">CacheVisitorInterface</abbr></a> $visitor)</code>
+    <strong>accept</strong>(<a href="../../../Icecave/Lace/Database/DatabaseVisitorInterface.html"><abbr title="Icecave\Lace\Database\DatabaseVisitorInterface">DatabaseVisitorInterface</abbr></a> $visitor)</code>
     </h3>
     <div class="details">
         <p>Visit this node with the given visitor.</p>
@@ -168,7 +168,7 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../../Icecave/Lace/Handler/Cache/CacheVisitorInterface.html"><abbr title="Icecave\Lace\Handler\Cache\CacheVisitorInterface">CacheVisitorInterface</abbr></a></td>
+                <td><a href="../../../Icecave/Lace/Database/DatabaseVisitorInterface.html"><abbr title="Icecave\Lace\Database\DatabaseVisitorInterface">DatabaseVisitorInterface</abbr></a></td>
                 <td>$visitor</td>
                 <td>
 </td>
