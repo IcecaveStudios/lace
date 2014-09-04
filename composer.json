@@ -24,7 +24,12 @@
         "php": ">=5.5"
     },
     "require-dev": {
-        "icecave/archer": "~1"
+        "doctrine/cache": "~1",
+        "icecave/archer": "~1",
+        "icecave/isolator": "~2"
+    },
+    "suggests": {
+        "doctrine/cache": "Allows Lace to construct and configure cache providers from a DSN."
     },
     "autoload": {
         "psr-4": {
