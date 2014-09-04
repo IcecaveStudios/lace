@@ -39,15 +39,18 @@ trait ParserTrait
      * The return value may differ based on the type of DSN being parsed.
      *
      * @param string $dsn The DSN to parse.
+     * @param HandlerInterface|null &$handler Assigned the handler that parsed the DSN.
      *
      * @return mixed The data parsed from the DSN.
      * @throws InvalidArgumentException if the DSN could not be parsed.
      */
-    public function parse($dsn)
+    public function parse($dsn, HandlerInterface &$handler = null)
     {
-        foreach ($this->handlers as $handler) {
+        foreach ($this->handlers as $potentialHandler) {
             $data = null;
-            if ($handler->supports($dsn, $data)) {
+            if ($potentialHandler->supports($dsn, $data)) {
+                $handler = $potentialHandler;
+
                 return $handler->parse($dsn, $data);
             }
         }

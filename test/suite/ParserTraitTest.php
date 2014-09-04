@@ -45,6 +45,32 @@ class ParserTraitTest extends PHPUnit_Framework_TestCase
         Phake::verify($this->handler1, Phake::never())->parse(Phake::anyParameters());
     }
 
+    public function testParseWithHandlerArgument()
+    {
+        $handler = null;
+
+        $this->parser->addHandler($this->handler1);
+        $this->parser->addHandler($this->handler2);
+
+        $this->assertSame(
+            '<result>',
+            $this->parser->parse('<dsn>', $handler)
+        );
+
+        Phake::inOrder(
+            Phake::verify($this->handler1)->supports('<dsn>', null),
+            Phake::verify($this->handler2)->supports('<dsn>', null),
+            Phake::verify($this->handler2)->parse('<dsn>', '<data>')
+        );
+
+        $this->assertSame(
+            $this->handler2,
+            $handler
+        );
+
+        Phake::verify($this->handler1, Phake::never())->parse(Phake::anyParameters());
+    }
+
     public function testAddAndRemoveHandlers()
     {
         $this->parser->addHandler($this->handler1);
