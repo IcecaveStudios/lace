@@ -1,8 +1,6 @@
 <?php
 namespace Icecave\Lace\Handler;
 
-use InvalidArgumentException;
-
 class PostgresHandler implements HandlerInterface
 {
     const DEFAULT_PORT = 5432;
@@ -34,9 +32,9 @@ class PostgresHandler implements HandlerInterface
     /**
      * Populate the connection options array with data from the DSN.
      *
-     * @param array &$connectionOptions The connection options array.
-     * @param string $dsn The DSN being parsed.
-     * @param mixed $data The data produced by the supports() method, if any.
+     * @param array  &$connectionOptions The connection options array.
+     * @param string $dsn                The DSN being parsed.
+     * @param mixed  $data               The data produced by the supports() method, if any.
      */
     protected function populateConnectionOptions(array &$connectionOptions, $dsn, $data)
     {
