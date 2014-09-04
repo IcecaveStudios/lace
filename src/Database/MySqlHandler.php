@@ -1,8 +1,10 @@
 <?php
-namespace Icecave\Lace\Handler\Database;
+namespace Icecave\Lace\Database;
 
-class SqliteHandler implements DatabaseHandlerInterface
+class MySqlHandler implements DatabaseHandlerInterface
 {
+    const DEFAULT_PORT = 3306;
+
     use ConnectionOptionsHandlerTrait;
 
     /**
@@ -13,7 +15,7 @@ class SqliteHandler implements DatabaseHandlerInterface
      */
     protected function uriSchemePatterns()
     {
-        return ['/^sqlite$/i'];
+        return ['/^mysql$/i'];
     }
 
     /**
@@ -24,7 +26,7 @@ class SqliteHandler implements DatabaseHandlerInterface
      */
     protected function driverName()
     {
-        return 'pdo_sqlite';
+        return 'pdo_mysql';
     }
 
     /**
@@ -36,12 +38,11 @@ class SqliteHandler implements DatabaseHandlerInterface
      */
     protected function populateConnectionOptions(array &$connectionOptions, $dsn, $data)
     {
-        if ($data['host'] === 'memory') {
-            $connectionOptions['memory'] = true;
-        } else {
-            $connectionOptions['memory'] = false;
-            $connectionOptions['path'] = $data['path'];
-        }
+        $this->populateCommonConnectionOptions(
+            $connectionOptions,
+            $data,
+            self::DEFAULT_PORT
+        );
     }
 
     /**
@@ -57,7 +58,7 @@ class SqliteHandler implements DatabaseHandlerInterface
         $arguments[0] = $this;
 
         return call_user_func_array(
-            [$visitor, 'visitSqliteHandler'],
+            [$visitor, 'visitMySqlHandler'],
             $arguments
         );
     }

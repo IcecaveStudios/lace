@@ -1,5 +1,5 @@
 <?php
-namespace Icecave\Lace\Handler\Cache;
+namespace Icecave\Lace\Cache;
 
 use InvalidArgumentException;
 

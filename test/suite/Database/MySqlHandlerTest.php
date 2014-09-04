@@ -1,5 +1,5 @@
 <?php
-namespace Icecave\Lace\Handler\Database;
+namespace Icecave\Lace\Database;
 
 use Phake;
 use PHPUnit_Framework_TestCase;

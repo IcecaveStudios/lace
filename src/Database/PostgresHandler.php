@@ -1,9 +1,9 @@
 <?php
-namespace Icecave\Lace\Handler\Database;
+namespace Icecave\Lace\Database;
 
-class MySqlHandler implements DatabaseHandlerInterface
+class PostgresHandler implements DatabaseHandlerInterface
 {
-    const DEFAULT_PORT = 3306;
+    const DEFAULT_PORT = 5432;
 
     use ConnectionOptionsHandlerTrait;
 
@@ -15,7 +15,7 @@ class MySqlHandler implements DatabaseHandlerInterface
      */
     protected function uriSchemePatterns()
     {
-        return ['/^mysql$/i'];
+        return ['/^postgres(ql)?$/i'];
     }
 
     /**
@@ -26,7 +26,7 @@ class MySqlHandler implements DatabaseHandlerInterface
      */
     protected function driverName()
     {
-        return 'pdo_mysql';
+        return 'pdo_pgsql';
     }
 
     /**
@@ -58,7 +58,7 @@ class MySqlHandler implements DatabaseHandlerInterface
         $arguments[0] = $this;
 
         return call_user_func_array(
-            [$visitor, 'visitMySqlHandler'],
+            [$visitor, 'visitPostgresHandler'],
             $arguments
         );
     }

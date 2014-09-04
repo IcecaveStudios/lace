@@ -1,15 +1,15 @@
 <?php
-namespace Icecave\Lace;
+namespace Icecave\Lace\Database;
 
 use PHPUnit_Framework_TestCase;
 
 /**
- * @covers Icecave\Lace\DatabaseDsnParser
  * @covers Icecave\Lace\ParserTrait
- * @covers Icecave\Lace\Handler\Database\ConnectionOptionsHandlerTrait
- * @covers Icecave\Lace\Handler\Database\MySqlHandler
- * @covers Icecave\Lace\Handler\Database\PostgresHandler
- * @covers Icecave\Lace\Handler\Database\SqliteHandler
+ * @covers Icecave\Lace\Database\DatabaseDsnParser
+ * @covers Icecave\Lace\Database\ConnectionOptionsHandlerTrait
+ * @covers Icecave\Lace\Database\MySqlHandler
+ * @covers Icecave\Lace\Database\PostgresHandler
+ * @covers Icecave\Lace\Database\SqliteHandler
  */
 class DatabaseDsnParserTest extends PHPUnit_Framework_TestCase
 {

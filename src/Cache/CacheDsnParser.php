@@ -1,5 +1,8 @@
 <?php
-namespace Icecave\Lace;
+namespace Icecave\Lace\Cache;
+
+use Icecave\Lace\ParserInterface;
+use Icecave\Lace\ParserTrait;
 
 /**
  * Parse a DSN into a connection options array describing a connection to a
@@ -11,6 +14,6 @@ class CacheDsnParser implements ParserInterface
 
     public function __construct()
     {
-        $this->addHandler(new Handler\Cache\RedisHandler);
+        $this->addHandler(new RedisHandler);
     }
 }

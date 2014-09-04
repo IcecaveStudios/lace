@@ -1,7 +1,7 @@
 <?php
-namespace Icecave\Lace\Handler\Cache;
+namespace Icecave\Lace\Cache;
 
-use Icecave\Lace\Handler\HandlerInterface;
+use Icecave\Lace\HandlerInterface;
 
 interface CacheHandlerInterface extends HandlerInterface
 {

@@ -1,7 +1,7 @@
 <?php
-namespace Icecave\Lace\Handler\Database;
+namespace Icecave\Lace\Database;
 
-use Icecave\Lace\Handler\HandlerInterface;
+use Icecave\Lace\HandlerInterface;
 
 interface DatabaseHandlerInterface extends HandlerInterface
 {

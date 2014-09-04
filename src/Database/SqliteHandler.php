@@ -1,10 +1,8 @@
 <?php
-namespace Icecave\Lace\Handler\Database;
+namespace Icecave\Lace\Database;
 
-class PostgresHandler implements DatabaseHandlerInterface
+class SqliteHandler implements DatabaseHandlerInterface
 {
-    const DEFAULT_PORT = 5432;
-
     use ConnectionOptionsHandlerTrait;
 
     /**
@@ -15,7 +13,7 @@ class PostgresHandler implements DatabaseHandlerInterface
      */
     protected function uriSchemePatterns()
     {
-        return ['/^postgres(ql)?$/i'];
+        return ['/^sqlite$/i'];
     }
 
     /**
@@ -26,7 +24,7 @@ class PostgresHandler implements DatabaseHandlerInterface
      */
     protected function driverName()
     {
-        return 'pdo_pgsql';
+        return 'pdo_sqlite';
     }
 
     /**
@@ -38,11 +36,12 @@ class PostgresHandler implements DatabaseHandlerInterface
      */
     protected function populateConnectionOptions(array &$connectionOptions, $dsn, $data)
     {
-        $this->populateCommonConnectionOptions(
-            $connectionOptions,
-            $data,
-            self::DEFAULT_PORT
-        );
+        if ($data['host'] === 'memory') {
+            $connectionOptions['memory'] = true;
+        } else {
+            $connectionOptions['memory'] = false;
+            $connectionOptions['path'] = $data['path'];
+        }
     }
 
     /**
@@ -58,7 +57,7 @@ class PostgresHandler implements DatabaseHandlerInterface
         $arguments[0] = $this;
 
         return call_user_func_array(
-            [$visitor, 'visitPostgresHandler'],
+            [$visitor, 'visitSqliteHandler'],
             $arguments
         );
     }

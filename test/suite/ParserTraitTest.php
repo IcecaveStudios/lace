@@ -1,7 +1,6 @@
 <?php
 namespace Icecave\Lace;
 
-use Icecave\Lace\Handler\HandlerInterface;
 use Phake;
 use PHPUnit_Framework_TestCase;
 
