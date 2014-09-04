@@ -11,8 +11,8 @@ class DatabaseDsnParser implements ParserInterface
 
     public function __construct()
     {
-        $this->addHandler(new Handler\MySqlHandler);
-        $this->addHandler(new Handler\PostgresHandler);
-        $this->addHandler(new Handler\SqliteHandler);
+        $this->addHandler(new Handler\Database\MySqlHandler);
+        $this->addHandler(new Handler\Database\PostgresHandler);
+        $this->addHandler(new Handler\Database\SqliteHandler);
     }
 }

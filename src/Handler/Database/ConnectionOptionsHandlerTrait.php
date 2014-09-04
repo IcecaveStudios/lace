@@ -1,5 +1,5 @@
 <?php
-namespace Icecave\Lace\Handler;
+namespace Icecave\Lace\Handler\Database;
 
 use InvalidArgumentException;
 

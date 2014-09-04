@@ -6,10 +6,10 @@ use PHPUnit_Framework_TestCase;
 /**
  * @covers Icecave\Lace\DatabaseDsnParser
  * @covers Icecave\Lace\ParserTrait
- * @covers Icecave\Lace\Handler\ConnectionOptionsHandlerTrait
- * @covers Icecave\Lace\Handler\MySqlHandler
- * @covers Icecave\Lace\Handler\PostgresHandler
- * @covers Icecave\Lace\Handler\SqliteHandler
+ * @covers Icecave\Lace\Handler\Database\ConnectionOptionsHandlerTrait
+ * @covers Icecave\Lace\Handler\Database\MySqlHandler
+ * @covers Icecave\Lace\Handler\Database\PostgresHandler
+ * @covers Icecave\Lace\Handler\Database\SqliteHandler
  */
 class DatabaseDsnParserTest extends PHPUnit_Framework_TestCase
 {

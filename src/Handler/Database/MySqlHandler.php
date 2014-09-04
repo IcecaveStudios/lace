@@ -1,7 +1,7 @@
 <?php
-namespace Icecave\Lace\Handler;
+namespace Icecave\Lace\Handler\Database;
 
-class MySqlHandler implements HandlerInterface
+class MySqlHandler implements DatabaseHandlerInterface
 {
     const DEFAULT_PORT = 3306;
 
@@ -42,6 +42,24 @@ class MySqlHandler implements HandlerInterface
             $connectionOptions,
             $data,
             self::DEFAULT_PORT
+        );
+    }
+
+    /**
+     * Visit this node with the given visitor.
+     *
+     * @param DatabaseVisitorInterface $visitor
+     *
+     * @return mixed
+     */
+    public function accept(DatabaseVisitorInterface $visitor)
+    {
+        $arguments = func_get_args();
+        $arguments[0] = $this;
+
+        return call_user_func_array(
+            [$visitor, 'visitMySqlHandler'],
+            $arguments
         );
     }
 }

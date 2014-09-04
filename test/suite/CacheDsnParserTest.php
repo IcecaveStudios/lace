@@ -6,7 +6,7 @@ use PHPUnit_Framework_TestCase;
 /**
  * @covers Icecave\Lace\CacheDsnParser
  * @covers Icecave\Lace\ParserTrait
- * @covers Icecave\Lace\Handler\RedisHandler
+ * @covers Icecave\Lace\Handler\Cache\RedisHandler
  */
 class CacheDsnParserTest extends PHPUnit_Framework_TestCase
 {

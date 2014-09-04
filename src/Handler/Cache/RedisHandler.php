@@ -1,9 +1,9 @@
 <?php
-namespace Icecave\Lace\Handler;
+namespace Icecave\Lace\Handler\Cache;
 
 use InvalidArgumentException;
 
-class RedisHandler implements HandlerInterface
+class RedisHandler implements CacheHandlerInterface
 {
     const DEFAULT_HOSTNAME = 'localhost';
     const DEFAULT_PORT = 6379;
@@ -52,5 +52,23 @@ class RedisHandler implements HandlerInterface
         }
 
         return $connectionOptions;
+    }
+
+    /**
+     * Visit this node with the given visitor.
+     *
+     * @param CacheVisitorInterface $visitor
+     *
+     * @return mixed
+     */
+    public function accept(CacheVisitorInterface $visitor)
+    {
+        $arguments = func_get_args();
+        $arguments[0] = $this;
+
+        return call_user_func_array(
+            [$visitor, 'visitRedisHandler'],
+            $arguments
+        );
     }
 }
