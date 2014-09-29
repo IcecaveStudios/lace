@@ -71,6 +71,6 @@ Array
 ```
 
 <!-- references -->
-[Build Status]: http://img.shields.io/travis/IcecaveStudios/lace/develop.svg
-[Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/lace/develop.svg
-[SemVer]: http://img.shields.io/:semver-0.1.0-yellow.svg
+[Build Status]: http://img.shields.io/travis/IcecaveStudios/lace/develop.svg?style=flat-square
+[Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/lace/develop.svg?style=flat-square
+[SemVer]: http://img.shields.io/:semver-0.1.0-yellow.svg?style=flat-square
