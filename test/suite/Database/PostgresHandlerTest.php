@@ -8,8 +8,8 @@ class PostgresHandlerTest extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->visitor = Phake::mock(DatabaseVisitorInterface::CLASS);
-        $this->handler = new PostgresHandler;
+        $this->visitor = Phake::mock(DatabaseVisitorInterface::class);
+        $this->handler = new PostgresHandler();
     }
 
     public function testAccept()

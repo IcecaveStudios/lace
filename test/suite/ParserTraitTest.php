@@ -11,8 +11,8 @@ class ParserTraitTest extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->handler1 = Phake::mock(HandlerInterface::CLASS);
-        $this->handler2 = Phake::mock(HandlerInterface::CLASS);
+        $this->handler1 = Phake::mock(HandlerInterface::class);
+        $this->handler2 = Phake::mock(HandlerInterface::class);
 
         Phake::when($this->handler2)
             ->supports('<dsn>', Phake::setReference('<data>'))
@@ -22,7 +22,7 @@ class ParserTraitTest extends PHPUnit_Framework_TestCase
             ->parse(Phake::anyParameters())
             ->thenReturn('<result>');
 
-        $this->parser = $this->getObjectForTrait(ParserTrait::CLASS);
+        $this->parser = $this->getObjectForTrait(ParserTrait::class);
     }
 
     public function testParse()

@@ -14,7 +14,7 @@ trait ParserTrait
     public function addHandler(HandlerInterface $handler)
     {
         if (null === $this->handlers) {
-            $this->handlers = new SplObjectStorage;
+            $this->handlers = new SplObjectStorage();
         }
 
         $this->handlers->attach($handler);

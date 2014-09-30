@@ -8,8 +8,8 @@ class MySqlHandlerTest extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->visitor = Phake::mock(DatabaseVisitorInterface::CLASS);
-        $this->handler = new MySqlHandler;
+        $this->visitor = Phake::mock(DatabaseVisitorInterface::class);
+        $this->handler = new MySqlHandler();
     }
 
     public function testAccept()

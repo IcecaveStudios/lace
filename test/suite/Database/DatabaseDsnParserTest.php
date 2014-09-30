@@ -15,7 +15,7 @@ class DatabaseDsnParserTest extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->parser = new DatabaseDsnParser;
+        $this->parser = new DatabaseDsnParser();
     }
 
     /**

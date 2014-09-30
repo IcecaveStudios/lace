@@ -12,18 +12,18 @@ class CacheFactoryTest extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->connection = Phake::mock(Redis::CLASS);
-        $this->cache = Phake::mock(RedisCache::CLASS);
-        $this->isolator = Phake::mock(Isolator::CLASS);
-        $this->factory = new CacheFactory;
+        $this->connection = Phake::mock(Redis::class);
+        $this->cache = Phake::mock(RedisCache::class);
+        $this->isolator = Phake::mock(Isolator::class);
+        $this->factory = new CacheFactory();
         $this->factory->setIsolator($this->isolator);
 
         Phake::when($this->isolator)
-            ->new(Redis::CLASS)
+            ->new(Redis::class)
             ->thenReturn($this->connection);
 
         Phake::when($this->isolator)
-            ->new(RedisCache::CLASS)
+            ->new(RedisCache::class)
             ->thenReturn($this->cache);
     }
 
@@ -37,9 +37,9 @@ class CacheFactoryTest extends PHPUnit_Framework_TestCase
         $cache = $this->factory->create($dsn);
 
         Phake::inOrder(
-            Phake::verify($this->isolator)->new(Redis::CLASS),
+            Phake::verify($this->isolator)->new(Redis::class),
             Phake::verify($this->connection)->connect('hostname', 6379),
-            Phake::verify($this->isolator)->new(RedisCache::CLASS),
+            Phake::verify($this->isolator)->new(RedisCache::class),
             Phake::verify($this->cache)->setRedis($this->connection)
         );
 
@@ -62,10 +62,10 @@ class CacheFactoryTest extends PHPUnit_Framework_TestCase
         $cache = $this->factory->create($dsn);
 
         Phake::inOrder(
-            Phake::verify($this->isolator)->new(Redis::CLASS),
+            Phake::verify($this->isolator)->new(Redis::class),
             Phake::verify($this->connection)->connect('hostname', 1234),
             Phake::verify($this->connection)->auth('password'),
-            Phake::verify($this->isolator)->new(RedisCache::CLASS),
+            Phake::verify($this->isolator)->new(RedisCache::class),
             Phake::verify($this->cache)->setRedis($this->connection)
         );
 
@@ -87,10 +87,10 @@ class CacheFactoryTest extends PHPUnit_Framework_TestCase
         $cache = $this->factory->create($dsn, 'my-namespace');
 
         Phake::inOrder(
-            Phake::verify($this->isolator)->new(Redis::CLASS),
+            Phake::verify($this->isolator)->new(Redis::class),
             Phake::verify($this->connection)->connect('hostname', 6379),
             Phake::verify($this->connection)->setOption(Redis::OPT_PREFIX, 'my-namespace:'),
-            Phake::verify($this->isolator)->new(RedisCache::CLASS),
+            Phake::verify($this->isolator)->new(RedisCache::class),
             Phake::verify($this->cache)->setRedis($this->connection)
         );
 

@@ -8,8 +8,8 @@ class RedisHandlerTest extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->visitor = Phake::mock(CacheVisitorInterface::CLASS);
-        $this->handler = new RedisHandler;
+        $this->visitor = Phake::mock(CacheVisitorInterface::class);
+        $this->handler = new RedisHandler();
     }
 
     public function testAccept()

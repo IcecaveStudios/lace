@@ -12,7 +12,7 @@ class CacheDsnParserTest extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->parser = new CacheDsnParser;
+        $this->parser = new CacheDsnParser();
     }
 
     /**

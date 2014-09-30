@@ -16,7 +16,7 @@ class CacheFactory implements CacheFactoryInterface, CacheVisitorInterface
     public function __construct(CacheDsnParser $parser = null)
     {
         if (null === $parser) {
-            $parser = new CacheDsnParser;
+            $parser = new CacheDsnParser();
         }
 
         $this->parser = $parser;
@@ -59,7 +59,7 @@ class CacheFactory implements CacheFactoryInterface, CacheVisitorInterface
     {
         $connection = $this
             ->isolator()
-            ->new(Redis::CLASS);
+            ->new(Redis::class);
 
         $connection->connect(
             $this->connectionOptions['host'],
@@ -81,7 +81,7 @@ class CacheFactory implements CacheFactoryInterface, CacheVisitorInterface
 
         $cache = $this
             ->isolator()
-            ->new(RedisCache::CLASS);
+            ->new(RedisCache::class);
 
         $cache->setRedis($connection);
 

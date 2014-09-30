@@ -14,6 +14,6 @@ class CacheDsnParser implements ParserInterface
 
     public function __construct()
     {
-        $this->addHandler(new RedisHandler);
+        $this->addHandler(new RedisHandler());
     }
 }

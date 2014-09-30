@@ -8,8 +8,8 @@ class SqliteHandlerTest extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->visitor = Phake::mock(DatabaseVisitorInterface::CLASS);
-        $this->handler = new SqliteHandler;
+        $this->visitor = Phake::mock(DatabaseVisitorInterface::class);
+        $this->handler = new SqliteHandler();
     }
 
     public function testAccept()
