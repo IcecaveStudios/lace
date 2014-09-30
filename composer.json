@@ -28,7 +28,7 @@
         "icecave/archer": "~1",
         "icecave/isolator": "~2"
     },
-    "suggests": {
+    "suggest": {
         "doctrine/cache": "Allows Lace to construct and configure cache providers from a DSN."
     },
     "autoload": {
