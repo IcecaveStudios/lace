@@ -74,6 +74,7 @@ Array
 
 * Follow [@IcecaveStudios](https://twitter.com/IcecaveStudios) on Twitter
 * Visit the [Icecave Studios website](http://icecave.com.au)
+* Join `#icecave` on [irc.freenode.net](http://webchat.freenode.net?channels=icecave)
 
 <!-- references -->
 [Build Status]: http://img.shields.io/travis/IcecaveStudios/lace/develop.svg?style=flat-square
